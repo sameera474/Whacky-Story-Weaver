@@ -13,23 +13,29 @@ const imageArray = [
   },
   {
     name: "Sam_Fisher",
-    img: "images/Sam_Fiher.webp",
+    img: "images/Sam_Fisher.webp",
   },
 ];
 
-const story_images = document.querySelector("#story-images");
+// const story_images = document.querySelector("#story-images");
 const story_display = document.querySelector("#story-display");
+const StartButton = document.querySelector("#StartButton");
 
 function gameBoard() {
-  for (let i = 0; i < imageArray.length; i++) {
+  for (let i = 0; i <= imageArray.length; i++) {
     const imgStory = document.createElement("img");
-    imgStory.setAttribute("src", "images/start_page.jpg");
-    imgStory.setAttribute("id", i);
-    imgStory.setAttribute("onclick", "images/start");
+    imgStory.setAttribute("src", imageArray[i].img);
+    imgStory.setAttribute("id", "frontImages");
+    imgStory.setAttribute("onclick", "gamefuction()");
     console.log(imgStory);
 
-    story_images.appendChild(imgStory);
+    document.getElementById("story-images").appendChild(imgStory);
   }
+  
+  const resetButton = 
+
 }
 
-gameBoard();
+function gamefuction() {
+  console.log("start");
+}

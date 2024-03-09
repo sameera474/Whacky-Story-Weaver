@@ -1,0 +1,14 @@
+#story-images {
+  display: flex;
+  align-items: auto;
+  justify-content: space-between;
+  position: relative;
+  gap: 1em;
+  margin: 100px;
+}
+
+#frontImages {
+  width: 485px;
+  height: 250px;
+  gap: 20px;
+}
