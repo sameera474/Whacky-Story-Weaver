@@ -17,6 +17,21 @@ const imageArray = [
   },
 ];
 
+const storyArray = [
+  {
+    msg: "Hello 1",
+  },
+  {
+    msg: "Hello 2",
+  },
+  {
+    msg: "Hello 3",
+  },
+  {
+    msg: "Hello 4",
+  },
+];
+
 const story_images = document.querySelector("#story-images");
 const story_display = document.querySelector("#story-display");
 const startButton = document.querySelector("#startButton");
@@ -41,10 +56,12 @@ function gameBoard() {
     imgStory.setAttribute("src", imageArray[i].img);
     imgStory.setAttribute("id", i);
     imgStory.className = "frontImages";
-    imgStory.setAttribute("onclick", "gamefuction()");
+    // imgStory.setAttribute("onclick", "gamefunction()");
+    imgStory.addEventListener("click", gamefunction);
     console.log(imgStory);
 
     story_images.appendChild(imgStory);
+
     startButton.removeEventListener("click", gameBoard);
     startButton.textContent = "Restart";
     startButton.addEventListener("click", gameRestart);
@@ -61,6 +78,31 @@ function gameRestart() {
   console.log("Game has been reset.");
 }
 
-function gamefuction() {
-  console.log("start");
+let imgClick = [];
+function gamefunction() {
+  let imgID = this.getAttribute("id");
+
+  imgClick.push(imageArray[imgID].name);
+
+  // this.setAttribute("src", imageArray[imgID].img);
+
+  switch (imgID) {
+    case "0":
+      console.log("start 1");
+      document.getElementById("story").textContent = storyArray[imgID].msg;
+      break;
+    case "1":
+      console.log("start 2");
+      document.getElementById("story").textContent = storyArray[imgID].msg;
+      break;
+
+    case "3":
+      console.log("start 3");
+      document.getElementById("story").textContent = storyArray[imgID].msg;
+      break;
+    case "3":
+      console.log("start 4");
+      document.getElementById("story").textContent = storyArray[imgID].msg;
+      break;
+  }
 }
