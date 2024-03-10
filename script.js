@@ -71,6 +71,8 @@ function gameBoard() {
 function gameRestart() {
   document.getElementById("question").textContent = "";
   document.getElementById("story-images").innerHTML = "";
+  document.getElementById("story").textContent = "";
+
   startButton.textContent = "Start";
   startButton.removeEventListener("click", gameRestart);
   startButton.addEventListener("click", gameBoard);
@@ -96,7 +98,7 @@ function gamefunction() {
       document.getElementById("story").textContent = storyArray[imgID].msg;
       break;
 
-    case "3":
+    case "2":
       console.log("start 3");
       document.getElementById("story").textContent = storyArray[imgID].msg;
       break;

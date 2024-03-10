@@ -6,19 +6,39 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <button id="startButton" onclick="gameBoard()">Start</button>
-    <p id="question"></p>
-    <div id="story-images">
-      <!-- Where your story images will party -->
+    <nav>
+      <div class="nav_container">
+        <div class="logo">
+          <h1>Wacky Tales Weaver</h1>
+        </div>
+        <ul class="nav_list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-      <!-- We'll add images here in a bit -->
+    <div class="game_container">
+      <!-- Where your story images will party -->
+      <button id="startButton" onclick="gameBoard()">Start</button>
+      <p id="question"></p>
+      <div id="story-images">
+        <!-- Where your story images will party -->
+
+        <!-- We'll add images here in a bit -->
+      </div>
+      <div id="story-display">
+        <!-- Where your awesome story unfolds -->
+        <!-- Your story will pop up here -->
+        <p id="story"></p>
+      </div>
+      <!-- Link your JavaScript file down here -->
     </div>
-    <div id="story-display">
-      <!-- Where your awesome story unfolds -->
-      <!-- Your story will pop up here -->
-      <p id="story"></p>
-    </div>
-    <!-- Link your JavaScript file down here -->
+
+    <footer>
+      <p>© Copyright Sameera Wagaarachchige || All Rights Reserved</p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
