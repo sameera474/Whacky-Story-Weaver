@@ -47,7 +47,7 @@ function gameTrigerr() {
 
 function gameBoard() {
   document.getElementById("question").textContent =
-    "What is the fovorite game you like?";
+    "What is the favorite game you like?";
 
   story_images.innerHTML = "";
 
