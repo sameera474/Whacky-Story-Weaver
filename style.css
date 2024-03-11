@@ -130,6 +130,11 @@ nav li a:hover {
   margin: 50px;
 }
 
+.red_riding_hood_img {
+  width: 0.5%;
+  height: 0.5%;
+}
+
 footer {
   position: relative;
   margin-bottom: 20px;
