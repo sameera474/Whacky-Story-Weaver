@@ -106,15 +106,16 @@ function gameRestart() {
   startButton.textContent = "Start";
   startButton.removeEventListener("click", gameRestart);
   startButton.addEventListener("click", gameBoard);
+  currentIndex = 0;
 
   console.log("Game has been reset.");
 }
 let currentIndex = 0;
-let imgClick = [];
+// let imgClick = [];
 function gamefunction() {
   let imgID = this.getAttribute("id");
 
-  imgClick.push(imageArray[imgID].name);
+  // imgClick.push(imageArray[imgID].name);
   console.log(imgID);
 
   // this.setAttribute("src", imageArray[imgID].img);
@@ -123,7 +124,7 @@ function gamefunction() {
     case "0":
       console.log("start 1");
       // document.getElementById("story").textContent = storyArray[imgID].msg;
-      littleRedGameFunction();
+      openImage();
       break;
     case "1":
       console.log("start 2");
@@ -140,21 +141,17 @@ function gamefunction() {
       break;
   }
 
-  function littleRedGameFunction() {
+  function openImage() {
     document.getElementById("question").textContent = "";
     document.getElementById("story").textContent = "";
     document.getElementById("story-images").innerHTML = "";
-    openImage();
-  }
+    document.getElementById("question").textContent = "";
 
-  function nextImage() {
-    if (currentIndex < red_riding_hood_img_Array.length - 1) {
-      openImage();
-      currentIndex++;
+    if (currentIndex >= red_riding_hood_img_Array.length) {
+      document.getElementById("story").textContent = "The end";
+      return;
     }
-  }
 
-  function openImage() {
     const red_riding_hood_story = document.createElement("img");
     red_riding_hood_story.setAttribute(
       "src",
@@ -164,9 +161,19 @@ function gamefunction() {
     red_riding_hood_story.className = "red_riding_hood_img";
     story_images.appendChild(red_riding_hood_story);
 
-    red_riding_hood_story.addEventListener("click", nextImage());
+    const red_riding_hood_story_text = document.createElement("p");
+    red_riding_hood_story_text.textContent =
+      red_riding_hood_story_Array[currentIndex].msg;
+    red_riding_hood_story_text.setAttribute("id", currentIndex.toString());
+    red_riding_hood_story_text.className = "red_riding_hood_txt";
+    story_images.appendChild(red_riding_hood_story_text);
 
-    console.log(red_riding_hood_story);
+    currentIndex = currentIndex + 1;
+    red_riding_hood_story.removeEventListener("click", openImage);
+    red_riding_hood_story_text.removeEventListener("click", openImage);
+
+    red_riding_hood_story.addEventListener("click", openImage);
+    red_riding_hood_story_text.addEventListener("click", openImage);
   }
 }
 

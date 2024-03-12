@@ -60,9 +60,10 @@ nav li a:hover {
   display: flex;
   align-items: auto;
   justify-content: space-between;
-  position: relative;
-  gap: 1em;
-  padding: 0px 10px;
+  /* position: ; */
+  gap: 10px;
+  padding: 0px 70px;
+  margin: 0px;
 }
 
 .frontImages:hover {
@@ -107,7 +108,7 @@ nav li a:hover {
 
 .game_container {
   width: 100%;
-  height: 800px;
+  height: 900px;
 
   display: grid;
   place-items: center;
@@ -117,7 +118,7 @@ nav li a:hover {
   font-family: sans-serif;
   font-size: large;
   gap: 10px;
-  padding: 100px 0px;
+  padding: 150px 0px;
 }
 
 #story-display {
@@ -131,13 +132,22 @@ nav li a:hover {
 }
 
 .red_riding_hood_img {
-  width: 0.5%;
-  height: 0.5%;
+  width: 45%;
+  height: 45%;
+}
+
+.red_riding_hood_txt {
+  width: 45%;
+  height: 45%;
+}
+
+#story {
+  font-size: 50px;
 }
 
 footer {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   text-align: center;
   padding: auto;
   color: white;
