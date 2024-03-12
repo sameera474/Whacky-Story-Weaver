@@ -13,6 +13,7 @@ nav {
   position: fixed;
   color: #fff;
   background-image: linear-gradient(#150f00ee, #3d3400);
+  box-shadow: 1px 5px 10px rgba(236, 210, 210, 0.5);
   z-index: 1;
 }
 
@@ -62,7 +63,7 @@ nav li a:hover {
   justify-content: space-between;
   /* position: ; */
   gap: 10px;
-  padding: 0px 70px;
+  padding: 0px 150px;
   margin: 0px;
 }
 
@@ -139,6 +140,19 @@ nav li a:hover {
 .red_riding_hood_txt {
   width: 45%;
   height: 45%;
+
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0px 0px 10px rgb(5, 0, 0);
+  background-color: rgba(7, 17, 3, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: 0.1s;
+  cursor: pointer;
+  transform: scale(1.04);
 }
 
 #story {
