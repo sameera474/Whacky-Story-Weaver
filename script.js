@@ -23,7 +23,7 @@ const red_riding_hood_img_Array = [
   { name: "scene_9", img: "images/little-red-riding-hood-story/9.jpg" },
 ];
 
-const red_riding_hood_story_Array = [
+const red_riding_hood_Images_Array = [
   {
     msg: "Once upon a time, there lived the prettiest little girl ever seen. Her mother made her a little red hood, and everybody called her by the same name – Little Red Riding Hood. One day her mother asked her to go to her grandmother: “Go my girl, and see how your dear grandmother is doing, for I hear she has been very ill.”  Little Red Riding Hood set out immediately for her grandmother’s place.",
   },
@@ -114,7 +114,7 @@ function gamefunction() {
     case "0":
       console.log("start 1");
       // document.getElementById("story").textContent = storyArray[imgID].msg;
-      openImage_RedRidingHood();
+      openImage_Fuction();
       break;
     case "1":
       console.log("start 2");
@@ -131,7 +131,7 @@ function gamefunction() {
       break;
   }
 
-  function openImage_RedRidingHood() {
+  function openImage_Fuction() {
     document.getElementById("question").textContent = "";
     document.getElementById("story").textContent = "";
     document.getElementById("story-images").innerHTML = "";
@@ -142,34 +142,30 @@ function gamefunction() {
       return;
     }
 
-    const red_riding_hood_story = document.createElement("img");
-    red_riding_hood_story.setAttribute(
+    const red_riding_hood_Images = document.createElement("img");
+    red_riding_hood_Images.setAttribute(
       "src",
       red_riding_hood_img_Array[currentIndex].img
     );
-    red_riding_hood_story.setAttribute("id", currentIndex);
-    red_riding_hood_story.className = "red_riding_hood_img";
-    story_images.appendChild(red_riding_hood_story);
+    red_riding_hood_Images.setAttribute("id", currentIndex);
+    red_riding_hood_Images.className = "red_riding_hood_img";
+    story_images.appendChild(red_riding_hood_Images);
 
-    const red_riding_hood_story_text = document.createElement("p");
-    red_riding_hood_story_text.textContent =
-      red_riding_hood_story_Array[currentIndex].msg;
-    red_riding_hood_story_text.setAttribute("id", currentIndex.toString());
-    red_riding_hood_story_text.className = "red_riding_hood_txt";
-    story_images.appendChild(red_riding_hood_story_text);
+    // Display Story
+
+    const red_riding_hood_Story = document.createElement("p");
+    red_riding_hood_Story.textContent =
+      red_riding_hood_Images_Array[currentIndex].msg;
+    red_riding_hood_Story.setAttribute("id", currentIndex.toString());
+    red_riding_hood_Story.className = "red_riding_hood_txt";
+    story_images.appendChild(red_riding_hood_Story);
 
     currentIndex = currentIndex + 1;
-    red_riding_hood_story.removeEventListener("click", openImage_RedRidingHood);
-    red_riding_hood_story_text.removeEventListener(
-      "click",
-      openImage_RedRidingHood
-    );
+    red_riding_hood_Images.removeEventListener("click", openImage_Fuction);
+    red_riding_hood_Story.removeEventListener("click", openImage_Fuction);
 
-    red_riding_hood_story.addEventListener("click", openImage_RedRidingHood);
-    red_riding_hood_story_text.addEventListener(
-      "click",
-      openImage_RedRidingHood
-    );
+    red_riding_hood_Images.addEventListener("click", openImage_Fuction);
+    red_riding_hood_Story.addEventListener("click", openImage_Fuction);
   }
 }
 
