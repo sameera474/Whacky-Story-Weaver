@@ -118,16 +118,16 @@ function gamefunction() {
       break;
     case "1":
       console.log("start 2");
-      document.getElementById("story").textContent = storyArray[imgID].msg;
+      openImage_Fuction();
       break;
 
     case "2":
       console.log("start 3");
-      document.getElementById("story").textContent = storyArray[imgID].msg;
+      openImage_Fuction();
       break;
     case "3":
       console.log("start 4");
-      document.getElementById("story").textContent = storyArray[imgID].msg;
+      openImage_Fuction();
       break;
   }
 
